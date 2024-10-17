@@ -15,4 +15,12 @@ export default function decorate(block) {
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
+
+  var card = document.querySelectorAll('.cards-card-body');
+
+  for(let i = 0; i < card.length; i++) {
+    let listItem = document.createElement("div");
+    listItem.classList.add('cards-card-overlay');
+    card[i].append(listItem);
+  }
 }

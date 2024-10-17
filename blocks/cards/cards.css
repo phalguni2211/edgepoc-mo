@@ -2,18 +2,100 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+  list-style-type: none;
+  clear: both;
+  margin-top: 40px;
+  padding: 0;
+  text-align: center;
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  display: inline-table;
+  padding: 5px 10px;
+  position: relative;
 }
 
 .cards .cards-card-body {
-  margin: 16px;
+  width: 170px;
+  border-radius: 15px;
+  display: block;
+  padding: 20px 10px;
+  height: 145px;
+  font-size: 14px;
+  color: #211f20;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: #fff;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, .15);
+  overflow: hidden;
+  position: relative;
+  transition: all .3s ease-out;
+
+}
+
+.cards-card-overlay {
+  width: 19px;
+  position: absolute;
+  height: 19px;
+  border-radius: 50%;
+  background: #dce9ff;
+  top: 50px;
+  left: 75px;
+  z-index: 0;
+  transition: transform .3s ease-out
+}
+
+.cards-card-body:hover .cards-card-overlay {
+  transform: scale(12) translateZ(0);
+}
+
+.cards-card-body:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, .11), 0 24px 46px rgba(220, 233, 255, .48);
+}
+
+.cards .cards-card-body>p:first-child {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  text-align: center;
+  margin: 10px auto;
+  border-radius: 50%;
+  border: 2px solid #dce9ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: all .3s ease-out
+}
+
+.cards .cards-card-body:hover>p:first-child {
+  border: 2px solid #fff;
+}
+
+.cards  .cards-card-body>p:nth-child(2) {
+  position:relative;
+  z-index: 1;
+}
+
+.cards  .cards-card-body>p:first-child:after {
+  content: "";
+  width: 52px;
+  height: 52px;
+  display: block;
+  position: absolute;
+  background: #dce9ff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2.5px;
+  transition: opacity .3s ease-out
+}
+
+.cards  .cards-card-body:hover>p:first-child:after {
+  background: #f1f7ff;
 }
 
 .cards .cards-card-image {
@@ -21,7 +103,23 @@
 }
 
 .cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  z-index: 1;
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .cards > ul {
+      overflow: auto;
+      white-space: nowrap;
+      min-height: 180px;
+  }
+  .cards .cards-card-body {
+    width: 140px;
+  }
+  .cards  .cards-card-body>p:nth-child(2) {
+    font-size: 12px;
+  }
 }

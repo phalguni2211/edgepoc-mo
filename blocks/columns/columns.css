@@ -63,7 +63,7 @@
 .columns .columns-content-col p:nth-child(3){
   color: #6a738a;
   font-size: 15px;
-  font-family: 'Roboto, sans-serif';
+  font-family: 'Roboto', 'sans-serif';
 }
 
 .columns .columns-content-col p:last-child{

@@ -4,6 +4,7 @@ export default function decorate(block) {
 
   // setup image columns
   [...block.children].forEach((row) => {
+    row.classList.add('column-container');
     [...row.children].forEach((col) => {
       const pic = col.querySelector('picture');
       if (pic) {
@@ -12,6 +13,8 @@ export default function decorate(block) {
           // picture is only content in column
           picWrapper.classList.add('columns-img-col');
         }
+      } else {
+        col.classList.add('columns-content-col');
       }
     });
   });

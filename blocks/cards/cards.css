@@ -56,6 +56,10 @@
   box-shadow: 0 24px 36px rgba(0, 0, 0, .11), 0 24px 46px rgba(220, 233, 255, .48);
 }
 
+.cards .cards-card-body>p:first-child{
+  font-family: Roboto, sans-serif;
+}
+
 .cards .cards-card-body>p:first-child {
   width: 60px;
   height: 60px;

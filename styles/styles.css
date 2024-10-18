@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-:root {
+ :root {
   /* colors */
   --background-color: white;
   --light-color: #f8f8f8;
@@ -258,4 +258,30 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+
+#financial-tools {
+  font-size: 32px;
+  color: rgb(34 31 30 / var(--tw-text-opacity));
+  line-height: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: 'roboto';
+}
+
+#financial-tools::before {
+  content: '';
+  display: inline-block;
+  border: 2px solid transparent;
+  border-right: 150px solid #fcb017;
+  transform: translate(-12%, -235%);
+}
+
+#financial-tools::after {
+  content: '';
+  display: inline-block;
+  border: 2px solid transparent;
+  border-left: 150px solid #fcb017;
+  transform: translate(12%, -235%);
 }

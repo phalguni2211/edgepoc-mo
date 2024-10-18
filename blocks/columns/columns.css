@@ -148,7 +148,7 @@
   margin: 10px 0;
   font-family: Roboto;
   font-weight: 400;
-  word-spacing: 55px;
+  word-spacing: 2rem;
   display: block;
   width: 100%;
   text-align: center;
@@ -157,6 +157,15 @@
 @media (min-width: 768px) {
   .columns .columns-no-img-container p:first-child  {
     max-width: 83.333333%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #q----g-----l----p strong {
+      font-size: 70px;
+  }
+  #quality---------------growth----------------longevity--------price strong {
+    font-size: 18px;
   }
 }
 
@@ -189,6 +198,15 @@
     margin-top:30px;
     padding:20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  #q----g-----l----p strong {
+      font-size: 40px;
+  }
+  #quality---------------growth----------------longevity--------price strong {
+    font-size: 12px;
   }
 }
 

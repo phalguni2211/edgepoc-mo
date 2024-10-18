@@ -4,10 +4,12 @@ export default function decorate(block) {
 
   // setup image columns
   [...block.children].forEach((row) => {
-    row.classList.add('column-container');
+    
+    let flag = false;
     [...row.children].forEach((col) => {
       const pic = col.querySelector('picture');
       if (pic) {
+        flag = true;
         const picWrapper = pic.closest('div');
         if (picWrapper && picWrapper.children.length === 1) {
           // picture is only content in column
@@ -17,5 +19,10 @@ export default function decorate(block) {
         col.classList.add('columns-content-col');
       }
     });
+    if (!flag) {
+      row.classList.add('columns-no-img-container');
+    } else {
+      row.classList.add('column-container');
+    }
   });
 }

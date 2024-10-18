@@ -138,3 +138,23 @@
     order: unset;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .columns .columns-content-col p:first-child{
+      font-size: 20px;
+  }
+  .columns .columns-content-col h4 {
+    line-height: 22px;
+    margin-top: 5px;
+  }
+  .columns .columns-content-col p:nth-child(3) {
+    font-size: 13px;
+  }
+  .column-container {
+    margin-top:30px;
+    padding:20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+  }
+}
+
+

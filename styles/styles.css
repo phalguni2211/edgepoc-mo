@@ -285,3 +285,19 @@ main .section.highlight {
   border-left: 150px solid #fcb017;
   transform: translate(12%, -235%);
 }
+
+@media screen and (max-width: 768px) {
+  #financial-tools {
+    font-size: 1.125rem;
+    position: relative;
+  }
+
+  #financial-tools::before {
+    border-right: 60px solid #fcb017;
+  }
+
+  #financial-tools::after {
+    border-left: 60px solid #fcb017;
+  }
+  
+}

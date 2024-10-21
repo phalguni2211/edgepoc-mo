@@ -10,10 +10,14 @@ export default function decorate(block) {
       const pic = col.querySelector('picture');
       if (pic) {
         flag = true;
-        const picWrapper = pic.closest('div');
-        if (picWrapper && picWrapper.children.length === 1) {
-          // picture is only content in column
-          picWrapper.classList.add('columns-img-col');
+        if(pic.length == 1) {
+          const picWrapper = pic.closest('div');
+          if (picWrapper && picWrapper.children.length === 1) {
+            // picture is only content in column
+            picWrapper.classList.add('columns-img-col');
+          }
+        } else {
+          col.classList.add('columns-content-col');
         }
       } else {
         col.classList.add('columns-content-col');

@@ -21,6 +21,7 @@ footer .footer p {
   height: 100%;
   flex: 1;
   align-self: stretch;
+  margin-bottom: 30px;;
 }
 
 .footer .columns-3-cols .columns-content-col h5 {
@@ -50,7 +51,13 @@ footer .footer p {
   color: #6a738a;
 }
 
-.footer .columns-3-cols .columns-container .default-content-wrapper p{
+.footer .default-content-wrapper p:first-child{
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid rgba(33, 41, 90, .2);
+}
+
+.footer .default-content-wrapper p{
   color: #6a738a;
   font-size: 12px;
   line-height: normal;

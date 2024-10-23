@@ -165,7 +165,7 @@
     margin: 0;
 }
 
-.cards.block.cards-financial-tool .cards > ul > li img {
+.cards.block.cards-financial-tool > ul > li img {
     position: relative;
     height: 50px;
     width: 50px;

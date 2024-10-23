@@ -137,6 +137,7 @@
     height: auto;
     display: flex;
     justify-content: start;
+    align-items: center;
 }
 
 .cards.block.cards-financial-tool .cards-card-body>p:first-child{
@@ -173,3 +174,7 @@
     margin-top: 6px;
 }
 
+.cards.block.cards-financial-tool  .cards-card-overlay,
+.cards.block.cards-financial-tool  .cards-card-body>p:first-child:after{
+    display: none;
+}

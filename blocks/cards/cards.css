@@ -180,3 +180,47 @@
 }
 
 
+/* Investment Philosophy section */
+
+.investmentbg-section {
+    width: 100%;
+    min-height: 245px;
+    height: auto;
+    position: relative;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.investmentbg-section img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    object-position: center;
+    color: transparent;
+}
+
+.investmentbg-section .headingH1{
+    color: #231f20;
+    font-size: 30px;
+    line-height: 35px;
+    position: relative;
+    margin: 35px 0;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.investmentbg-section  h2.big-description {
+    font-size: 44px;
+    line-height: 60px;
+    font-family: Roboto;
+    font-weight: 700;
+}
+
+.investmentbg-section .new-full-investmentbg .col-md-10 {
+    position: relative;
+}

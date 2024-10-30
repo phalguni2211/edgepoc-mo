@@ -187,8 +187,12 @@
     min-height: 245px;
     height: auto;
     position: relative;
-    padding: 40px 0;
+    padding: 40px 0 !important;
     text-align: center;
+}
+
+.investmentbg-section .headingH1 {
+    margin-top: 0;
 }
 
 .investmentbg-section img{
@@ -219,6 +223,8 @@
     line-height: 60px;
     font-family: Roboto;
     font-weight: 700;
+    position: relative;
+    margin: 0;
 }
 
 .investmentbg-section .new-full-investmentbg .col-md-10 {

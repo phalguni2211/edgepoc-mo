@@ -715,3 +715,13 @@ export {
   waitForFirstImage,
   wrapTextNodes,
 };
+
+investmentbg-section
+
+<div>
+  <div class="text-center">
+    <p class="headingH1 bold title-red mt-1">Our Investment Philosophy</p>
+    <h2 class="big-description">At Motilal Oswal, we believe in buying quality companies and riding their growth cycle
+    </h2>
+  </div>
+</div>

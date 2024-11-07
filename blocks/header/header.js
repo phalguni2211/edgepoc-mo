@@ -168,13 +168,13 @@ export default async function decorate(block) {
 function load_section() {
       console.log("new section added ");
       alert("new section added ");
-      document.getElementsByClassName[0]("columnsnew-wrapper").innerHTML='New Column added here';
+      document.getElementsByClassName("default-content-wrapper")[0].innerHTML='New Column added here';
 }
 load_section();
 
 function load_section1() {
 alert("new section added 1");
     console.log("new section added 1");
-     document.getElementsByClassName[0]("columnsnew-wrapper").innerHTML='<object type="text/html" data="columnsnew.html" ></object>';
+     document.getElementsByClassName("columnsnew")[0].innerHTML='<object type="text/html" data="columnsnew.html" ></object>';
 }
 load_section1();

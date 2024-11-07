@@ -164,17 +164,17 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 }
-
-function load_section() {
-      console.log("new section added ");
-      alert("new section added ");
-      document.getElementsByClassName("default-content-wrapper")[0].innerHTML='New Column added here';
-}
-load_section();
-
-function load_section1() {
-alert("new section added 1");
-    console.log("new section added 1");
-     document.getElementsByClassName("columnsnew")[0].innerHTML='<object type="text/html" data="columnsnew.html" ></object>';
-}
-load_section1();
+//
+//function load_section() {
+//      console.log("new section added ");
+//      alert("new section added ");
+//      document.getElementsByClassName("default-content-wrapper")[0].innerHTML='New Column added here';
+//}
+//load_section();
+//
+//function load_section1() {
+//alert("new section added 1");
+//    console.log("new section added 1");
+//     document.getElementsByClassName("columnsnew")[0].innerHTML='<object type="text/html" data="columnsnew.html" ></object>';
+//}
+//load_section1();

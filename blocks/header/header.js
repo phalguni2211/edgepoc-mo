@@ -1,8 +1,11 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
+import { newcolumnAdd } from '../columnsnew/columnnew.js';
 
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
+
+newcolumnAdd();
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {

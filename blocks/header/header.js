@@ -1,11 +1,8 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
-import { newcolumnAdd } from '../columnsnew/columnnew.js';
 
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
-
-newcolumnAdd();
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
@@ -167,3 +164,17 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 }
+
+function load_section() {
+      console.log("new section added ");
+      alert("new section added ");
+      document.getElementsByClassName[0]("columnsnew-wrapper").innerHTML='New Column added here';
+}
+load_section();
+
+function load_section1() {
+alert("new section added 1");
+    console.log("new section added 1");
+     document.getElementsByClassName[0]("columnsnew-wrapper").innerHTML='<object type="text/html" data="columnsnew.html" ></object>';
+}
+load_section1();

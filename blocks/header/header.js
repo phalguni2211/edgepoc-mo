@@ -178,3 +178,24 @@ export default async function decorate(block) {
 //     document.getElementsByClassName("columnsnew")[0].innerHTML='<object type="text/html" data="columnsnew.html" ></object>';
 //}
 //load_section1();
+
+
+// Function to load HTML content
+function loadHTMLContent() {
+alert("new section added ", ../blockcolumnsnew/columnsnew.html);
+fetch('../columnsnew/columnsnew.html"')
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.text();
+})
+.then(data => {
+  document.getElementsByClassName("columnsnew")[0].innerHTML = data;
+})
+.catch(error => {
+console.error('There was a problem loading the HTML content:', error);
+});
+} // Call the function to load HTML content when the page loads loadHTMLContent
+
+loadHTMLContent();

@@ -182,7 +182,7 @@ export default async function decorate(block) {
 
 // Function to load HTML content
 function loadHTMLContent() {
-alert("new section added ", ../blockcolumnsnew/columnsnew.html);
+alert("new section added ");
 fetch('../columnsnew/columnsnew.html"')
 .then(response => {
   if (!response.ok) {

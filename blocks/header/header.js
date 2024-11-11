@@ -182,10 +182,12 @@ export default async function decorate(block) {
 
 // Function to load HTML content
 function loadHTMLContent() {
-alert("new section added ");
+console.log("new section added ");
 fetch('../blocks/columnsnew/columnsnew.html"')
 .then(response => {
+  console.log("new section added under then");
   if (!response.ok) {
+  console.log("new section added under then (if !response");
     throw new Error('Network response was not ok');
   }
   return response.text();

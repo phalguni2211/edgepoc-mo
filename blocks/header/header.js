@@ -183,7 +183,7 @@ export default async function decorate(block) {
 // Function to load HTML content
 function loadHTMLContent() {
 console.log("new section added ");
-fetch('../blocks/columnsnew/columnsnew.html"')
+fetch('../columnsnew/columnsnew.html"')
 .then(response => {
   console.log("new section added under then");
   if (!response.ok) {

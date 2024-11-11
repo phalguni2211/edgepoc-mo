@@ -164,40 +164,18 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 }
-//
-//function load_section() {
-//      console.log("new section added ");
-//      alert("new section added ");
-//      document.getElementsByClassName("default-content-wrapper")[0].innerHTML='New Column added here';
-//}
-//load_section();
-//
-//function load_section1() {
-//alert("new section added 1");
-//    console.log("new section added 1");
-//     document.getElementsByClassName("columnsnew")[0].innerHTML='<object type="text/html" data="columnsnew.html" ></object>';
-//}
-//load_section1();
 
-
-// Function to load HTML content
-function loadHTMLContent() {
-console.log("new section added ");
-fetch('../columnsnew/columnsnew.html"')
-.then(response => {
-  console.log("new section added under then");
-  if (!response.ok) {
-  console.log("new section added under then (if !response");
-    throw new Error('Network response was not ok');
-  }
-  return response.text();
-})
-.then(data => {
-  document.getElementsByClassName("columnsnew")[0].innerHTML = data;
-})
-.catch(error => {
-console.error('There was a problem loading the HTML content:', error);
-});
-} // Call the function to load HTML content when the page loads loadHTMLContent
-
-loadHTMLContent();
+async function loadContent() {
+ try { const response = await ('../columnsnew/columnsnew.html');
+  console.log("new section added");
+if (response.ok) {
+const htmlContent = await response.text();
+ console.log("new section added response");
+document.getElementsByClassName("columnsnew")[0].innerHTML = data;
+} else {
+console.error('Error loading content:', response.status);
+} }
+catch (error) {
+console.error('Error:', error);
+} }
+loadContent();

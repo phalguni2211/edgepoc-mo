@@ -164,51 +164,31 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 }
-//
-//function load_section() {
-//      console.log("new section added ");
-//      alert("new section added ");
-//      document.getElementsByClassName("default-content-wrapper")[0].innerHTML='New Column added here';
-//}
-//load_section();
-//
-//function load_section1() {
-//alert("new section added 1");
-//    console.log("new section added 1");
-//     document.getElementsByClassName("columnsnew")[0].innerHTML='<object type="text/html" data="columnsnew.html" ></object>';
-//}
-//load_section1();
-
-
-// Function to load HTML content
-//function loadHTMLContent() {
-//console.log("new section added ");
-//fetch('../columnsnew/columnsnew.html"')
-//.then(response => {
-//  console.log("new section added under then");
-//  if (!response.ok) {
-//  console.log("new section added under then (if !response");
-//    throw new Error('Network response was not ok');
-//  }
-//  return response.text();
-//})
-//.then(data => {
-//  document.getElementsByClassName("columnsnew")[0].innerHTML = data;
-//})
-//.catch(error => {
-//console.error('There was a problem loading the HTML content:', error);
-//});
-//}
-//
-//loadHTMLContent();
-
-
 
 function renderNewSection() {
-  const columnsNew = document.getElementsByClassName("columnsnew")[0];
-  columnsNew.textContent = "this is renderNewSection";
-  document.body.prepend(header);
-  console.log("renderNewSection shubham");
+
+  console.log("first console");
+
+  fetch('../columnsnew/columnsnew.html')
+    .then(response => {
+      console.log("response console");
+      if(!response.ok){
+        throw new Error('Netwrk response is not valid');
+      }
+      return response.text();
+    })
+
+    .then(data => {
+      console.log('data', data);
+      const columnsNew = document.getElementsByClassName("columnsnew")[0];
+      columnsNew.innerHtml += data;
+    })
+
+    .catch(error => {
+      console.error("error fetching file:", error);
+    })
+
+     console.log("last console");
 }
 
 renderNewSection();
